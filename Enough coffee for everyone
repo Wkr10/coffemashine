@@ -1,0 +1,39 @@
+//ошибка при первой итерации цикла
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+
+        //int cupsCoffe = 0;
+
+        System.out.println("Write how many ml of water the coffee machine has:");
+        int water = sc.nextInt();
+        System.out.println("Write how many ml of milk the coffee machine has:");
+        int milk = sc.nextInt();
+        System.out.println("Write how many grams of coffee beans the coffee machine has:");
+        int bean = sc.nextInt();
+        System.out.println("Write how many cups of coffee you will need:");
+        int wantCups = sc.nextInt();
+
+        boolean enough = true;
+
+        for (int cupsCoffe = 0; enough; cupsCoffe++ ) {
+            if (water > 200 & milk > 50 & bean > 15) {
+                water -= 200;
+                milk -= 50;
+                bean -= 15;
+
+            } else {
+                enough = false;
+                if (cupsCoffe == wantCups) System.out.println("Yes, I can make that amount of coffee");
+                else if (cupsCoffe > wantCups)
+                    System.out.println("Yes, I can make that amount of coffee (and even " + (cupsCoffe - wantCups) + " more than that)");
+                else System.out.println("No, I can make only " + cupsCoffe + " cup(s) of coffee");
+            }
+        }
+
+    }
+}
