@@ -1,0 +1,27 @@
+package machine;
+import java.util.Scanner;
+
+
+public class CoffeeMachine {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+
+        System.out.println("Write how many cups of coffee you will need:");
+
+        int wantCup = sc.nextInt();
+
+        int water = 200;
+        int milk = 50;
+        int coffe  = 15;
+
+        System.out.println ((wantCup == 1) ? "For " + wantCup + " cup of coffee you will need:": "For " +wantCup + " cups of coffee you will need:");
+
+        System.out.println((water * wantCup) + " of water");
+        System.out.println((milk * wantCup) + " of milk");
+        System.out.println((coffe * wantCup) + " of coffee beans");
+
+
+        
+        
+    }
+}
