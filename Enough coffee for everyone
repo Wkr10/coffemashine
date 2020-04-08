@@ -1,4 +1,4 @@
-//ошибка при первой итерации цикла
+
 
 import java.util.Scanner;
 
@@ -21,7 +21,7 @@ public class Main {
         boolean enough = true;
 
         for (int cupsCoffe = 0; enough; cupsCoffe++ ) {
-            if (water > 200 & milk > 50 & bean > 15) {
+            if (water >= 200 & milk >= 50 & bean >= 15) {
                 water -= 200;
                 milk -= 50;
                 bean -= 15;
